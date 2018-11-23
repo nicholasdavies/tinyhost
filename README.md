@@ -36,3 +36,11 @@ the name of the parameter preceded by a hyphen is followed by a space, then the 
 ```
 
 Note that the `fileout` parameter is interpreted in a special way: if it is the same for multiple consecutive parameter sets specified through a config file, then the results of these multiple runs will be appended to the same output file. If `fileout` changes between parameter sets (or at the beginning of a run of `tinyhost`), then existing contents are overwritten.
+
+Some parameters (e.g. `beta`) are vector parameters, in that they take a sequence of values. Separate each value using commas, like so:
+
+```
+./tinyhost -beta 4,3.8
+```
+
+with just commas, no spaces.
