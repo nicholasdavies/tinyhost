@@ -5,7 +5,6 @@
 #define RANDOMIZER_H
 
 #include <random>
-#include <ext/random>
 #include <vector>
 #include <limits>
 
@@ -64,7 +63,7 @@ private:
     double LambertW0(const double x);
     static double FoundressPoisson_LogLambda[256];
 
-    typedef __gnu_cxx::sfmt19937 engine_type;/////
+    typedef std::mt19937 engine_type;/////
     /////typedef _msws engine_type;
     std::seed_seq seed;
     engine_type engine;
